@@ -1,0 +1,14 @@
+.nav {
+  height: 10vh;
+  width: 100%;
+  background-color: #C38D5F;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo{
+    height: 100%;
+    margin: 5px;
+  }
+}

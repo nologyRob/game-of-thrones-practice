@@ -1,0 +1,25 @@
+.quote-card{
+  height: 200px;
+  width: 400px;
+  border: 1px solid;
+  margin: 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5px;
+  
+  &__header{
+    text-align: center;
+    margin-bottom: 2px;
+  }
+  &__house{
+    margin-top:0px;
+    text-align: center;
+    font-style: italic;
+  }
+  &__sentence{
+    text-align: center;
+  }
+}
