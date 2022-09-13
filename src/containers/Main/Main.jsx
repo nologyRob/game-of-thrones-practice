@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from "react";
 import QuoteCard from "../../components/QuoteCard/QuoteCard";
-import Slider from "../../components/Slider/Slider";
 import "./Main.scss";
 const Main = () => {
   const [quotes, setQuotes] = useState([]);
 
   const getQuotes = async () => {
     const data = await fetch(
-      "https://api.gameofthronesquotes.xyz/v1/random/50"
-    );
+      "https://api.gameofthronesquotes.xyz/v1/random/50");
     const res = await data.json();
     setQuotes(res);
   };
@@ -29,10 +27,11 @@ const Main = () => {
 
   return (
     <>
-      <Slider />
       <div className="main">
-        <button onClick={getQuotes}>Click to see Quotes!</button>
-        {quotesToJSX(quotes)}
+        <button className="main__button" onClick={getQuotes}>Click to see Quotes!</button>
+        <div className="main__quotes">
+          {quotesToJSX(quotes)}
+        </div>
       </div>
     </>
   );
