@@ -1,18 +1,11 @@
 import React from 'react'
 import "./Slider.scss"
 
-const Slider = (props) => {
-  const {setLink} = props;
-
-  const getSliderValue = (event) => {
-    setLink(`https://api.gameofthronesquotes.xyz/v1/random/${event.target.value}`)
-  }
-
-
+const Slider = () => {
   
   return (
     <div>
-      <input type="range" className="slider" onClick={getSliderValue}/>
+      <input type="range" className="slider"/>
     </div>
   )
 }
