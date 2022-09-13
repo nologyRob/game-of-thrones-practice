@@ -6,9 +6,12 @@ import Nav from './containers/Nav/Nav';
 function App() {
   const [searchTerm, setSearchTerm] = useState("")
 
+  const handleInput = (event) => {
+    setSearchTerm(event.target.value)
+  }
   return (
     <div className="App">
-      <Nav setSearchTerm={setSearchTerm}/>
+      <Nav handleInput={handleInput}/>
       <Main searchTerm={searchTerm}/>
     </div>
   );

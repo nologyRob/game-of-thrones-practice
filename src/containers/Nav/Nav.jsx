@@ -4,11 +4,11 @@ import "./Nav.scss"
 import logo from "../../assets/images/logo.png"
 
 const Nav = (props) => {
-  const {setSearchTerm} = props;
+  const {handleInput} = props;
 
   return (
     <div className='nav'>
-      <SearchBar setSearchTerm={setSearchTerm}/>
+      <SearchBar handleInput={handleInput}/>
       <img className='nav__logo' src={logo} alt="GOT-logo" />
     </div>
   )
