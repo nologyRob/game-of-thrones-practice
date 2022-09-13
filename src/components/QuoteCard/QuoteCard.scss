@@ -1,9 +1,9 @@
 .quote-card{
   height: 200px;
   width: 400px;
-  border: 1px solid;
+  border: 8px outset rgba(28,110,164,0.57);
+  border-radius: 25px;
   margin: 10px;
-  border-radius: 5px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
