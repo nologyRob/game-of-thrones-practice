@@ -8,29 +8,39 @@ const Main = () => {
   const [link, setLink] = useState(
     `https://api.gameofthronesquotes.xyz/v1/random/50`
   );
-  
+
   const getQuotes = async () => {
     const data = await fetch(link);
     const res = await data.json();
     setQuotes(res);
   };
 
-  
-  
+  useEffect(() => {
+    getQuotes();
+  }, [value]);
+
   const quotesJSX = quotes.map((quote, index) => {
     return (
       <div key={index}>
-        <QuoteCard character={quote.character.name} sentence={quote.sentence} house={quote.character.house.name}/>
+        <QuoteCard
+          character={quote.character.name}
+          sentence={quote.sentence}
+          house={quote.character.house.name}
+        />
       </div>
     );
   });
 
   return (
-    <>
-      <Slider setLink={setLink} />
-      <div className="main"><button onClick={getQuotes}>Click to see Quotes!</button>{quotesJSX}</div>
-      
-    </>
+    <div className="main">
+      <div className="main__slider">
+        <Slider setLink={setLink} setValue={setValue} />
+      </div>
+      <h2>Showing {value} quotes:</h2>
+      <div className="main__quotes">
+      {quotesJSX}
+      </div>
+    </div>
   );
 };
 
