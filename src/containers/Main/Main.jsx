@@ -5,8 +5,7 @@ const Main = () => {
   const [quotes, setQuotes] = useState([]);
 
   const getQuotes = async () => {
-    const data = await fetch(
-      "https://api.gameofthronesquotes.xyz/v1/random/50");
+    const data = await fetch("https://api.gameofthronesquotes.xyz/v1/random/50");
     const res = await data.json();
     setQuotes(res);
   };
