@@ -25,14 +25,12 @@ const Main = () => {
   };
 
   return (
-    <>
       <div className="main">
         <button className="main__button" onClick={getQuotes}>Click to see Quotes!</button>
         <div className="main__quotes">
           {quotesToJSX(quotes)}
         </div>
       </div>
-    </>
   );
 };
 
