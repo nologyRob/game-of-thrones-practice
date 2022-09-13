@@ -18,7 +18,7 @@ const Main = (props) => {
 
   useEffect(() => {
     getQuotes();
-  }, [value]);
+  }, [value])// eslint-disable-line react-hooks/exhaustive-deps
 
   const filterQuotes = (quotesArr, searchTerm) => {
     return quotesArr.filter((quote) =>
